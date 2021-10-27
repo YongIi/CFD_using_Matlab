@@ -25,7 +25,7 @@ error_track = 0;  %used to track the error with time to see how the error increa
 %save the error at any particular time step to see how the error changes throught the calculations
 
 %% Calculations
-while error_mag > error_req  %iterate until reaching steady state
+while error_mag > error_req  %iterate until reaching steady state, stop when the error between two time steps is small enough
     %solve the discretized form of governing equations
     for i = 2: (n_points-1)  %perform one iteration, solve the solution of the next time step
         for j = 2: (n_points-1)
